@@ -13,7 +13,6 @@ import com.example.cryptoapp.domain.CoinInfo
 import com.example.cryptoapp.domain.CoinRepository
 import javax.inject.Inject
 
-@ApplicationScope
 class CoinRepositoryImpl @Inject constructor(
     private val application: Application,
     private val coinInfoDao: CoinInfoDao,
