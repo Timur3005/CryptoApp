@@ -4,6 +4,7 @@ import com.example.cryptoapp.data.database.CoinInfoDbModel
 import com.example.cryptoapp.data.network.model.CoinInfoDto
 import com.example.cryptoapp.data.network.model.CoinInfoJsonContainerDto
 import com.example.cryptoapp.data.network.model.CoinNamesListDto
+import com.example.cryptoapp.di.ApplicationScope
 import com.example.cryptoapp.domain.CoinInfo
 import com.google.gson.Gson
 import java.sql.Timestamp
@@ -11,8 +12,10 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
+import javax.inject.Inject
 
-class CoinMapper {
+@ApplicationScope
+class CoinMapper @Inject constructor(){
     fun mapDtoToDbModel(dto: CoinInfoDto) = CoinInfoDbModel(
         fromSymbol = dto.fromSymbol,
         toSymbol = dto.toSymbol,
