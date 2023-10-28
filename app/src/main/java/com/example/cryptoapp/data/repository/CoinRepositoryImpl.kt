@@ -8,7 +8,6 @@ import androidx.work.WorkManager
 import com.example.cryptoapp.data.database.CoinInfoDao
 import com.example.cryptoapp.data.mapper.CoinMapper
 import com.example.cryptoapp.data.workers.RefreshDataWorker
-import com.example.cryptoapp.di.ApplicationScope
 import com.example.cryptoapp.domain.CoinInfo
 import com.example.cryptoapp.domain.CoinRepository
 import javax.inject.Inject
