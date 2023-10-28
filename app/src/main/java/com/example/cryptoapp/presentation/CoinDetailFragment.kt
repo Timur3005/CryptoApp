@@ -21,7 +21,12 @@ class CoinDetailFragment : Fragment() {
     private val binding: FragmentCoinDetailBinding
         get() = _binding ?: throw RuntimeException("FragmentCoinDetailBinding = null")
 
+    private val component by lazy {
+        (requireActivity().application as App).component
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        component.inject(this)
         super.onCreate(savedInstanceState)
     }
 
